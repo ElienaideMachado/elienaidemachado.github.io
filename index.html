@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machado Estratégia & Negócios | Portfólio Profissional</title>
+    <!-- Fontes e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <style>
+        :root {
+            --primary: #2c3e50; /* Azul Petróleo Escuro */
+            --secondary: #a8907e; /* Bege Acinzentado / Nude */
+            --bg: #f5f5f5;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); scroll-behavior: smooth; }
+
+        /* Navegação */
+        nav {
+            position: fixed; width: 100%; padding: 20px 50px;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(255,255,255,0.95); z-index: 1000; border-bottom: 1px solid #eee;
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); }
+        .nav-links a { text-decoration: none; color: var(--text); margin-left: 30px; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--secondary); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 0 20px; background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1470') center/cover;
+        }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 10px; color: var(--primary); }
+        .hero-content p { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; color: var(--secondary); }
+
+        /* Seções Gerais */
+        section { padding: 100px 10% 60px; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; text-align: center; }
+
+        /* Grid de Portfólio (Serviços) */
+        .portfolio-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+        }
+        .portfolio-item {
+            background: #fff; padding: 40px; border-radius: 15px; border: 1px solid #eee;
+            transition: transform 0.3s ease; text-align: center;
+        }
+        .portfolio-item:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .portfolio-item i { font-size: 2rem; color: var(--secondary); margin-bottom: 20px; }
+        .portfolio-item h3 { margin-bottom: 15px; color: var(--primary); }
+
+        /* Sobre */
+        .about-container { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-image { flex: 1; min-width: 300px; height: 400px; background: var(--secondary); border-radius: 20px; overflow: hidden; }
+        .about-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(50%); }
+
+        /* Contato */
+        .contact { text-align: center; background: var(--primary); color: white; padding: 80px 20px; }
+        .contact h2 { color: white; }
+        .btn {
+            display: inline-block; padding: 15px 40px; background: var(--secondary);
+            color: white; text-decoration: none; border-radius: 50px; transition: 0.3s; margin-top: 20px;
+        }
+        .btn:hover { background: #917b6a; transform: scale(1.05); }
+
+        footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #888; }
+
+        @media (max-width: 768px) {
+            nav { padding: 20px; }
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Machado Estratégia & Negócios</div>
+        <div class="nav-links">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#especialidades">Especialidades</a>
+            <a href="#contato">Contato</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <p>Consultoria & Treinamentos</p>
+            <h1>Clareza • Estratégia • Execução • Posicionamento</h1>
+            <a href="#contato" class="btn" style="background: var(--primary);">Conheça meu trabalho</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="about-container">
+            <div class="about-image">
+                <!-- Substitua pelo link de uma foto dela -->
+                <img src="https://i.imgur.com/5k6rJfc.jpeg" alt="Elienaide Machado">
+            </div>
+            <div class="about-text">
+                <h2>Sobre Mim</h2>
+                <p style="text-align:justify">A Machado Estratégia e Negócios nasce com o propósito de transformar desafios empresariais em oportunidades reais de crescimento. Liderada por Elienaide Machado, a empresa atua de forma estratégica no desenvolvimento de soluções que integram tecnologia, gestão e inteligência de mercado.
+
+Com uma trajetória sólida nas áreas de tecnologia, educação e desenvolvimento comercial, Elienaide traz uma visão prática e orientada a resultados, apoiando empresas e profissionais na estruturação de processos, expansão de negócios e tomada de decisões mais assertivas.
+
+A atuação da Machado Estratégia e Negócios é pautada em três pilares principais:
+estratégia, para direcionar caminhos sustentáveis de crescimento;
+inovação, para adaptar negócios às novas demandas do mercado;
+e eficiência, para otimizar recursos e maximizar resultados.</p>
+                <br>
+                <p style="text-align:justify">Mais do que oferecer serviços, a Machado Estratégia e Negócios se posiciona como uma parceira de crescimento, comprometida com resultados concretos e com a evolução contínua de seus clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="especialidades" style="background-color: #f9f9f9;">
+        <h2>Áreas de Atuação</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h3>Consultorias</h3>
+                <p>Diagnóstico e planejamento estratégico para identificar oportunidades de crescimento para empresas de Varejo, otimizar processos e estruturar soluções eficientes. Atuamos lado a lado com o negócio para direcionar decisões mais assertivas e sustentáveis.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Mentorias</h3>
+                <p>Acompanhamento personalizado para desenvolvimento profissional e empresarial, com foco em resultados práticos. Compartilhamos conhecimento, direcionamento estratégico e suporte para acelerar a evolução e tomada de decisão.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Integração Tecnológica</h3>
+                <p>Implementação de tecnologias e soluções digitais que modernizam processos, aumentam a produtividade e fortalecem a competitividade do negócio. Conectamos estratégia e tecnologia para gerar resultados reais.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <h2>Vamos conversar?</h2>
+        <p>Atendimentos presenciais na Bahia e Online para todo o Brasil.</p>
+        <a href="https://wa.me/5575988362038" class="btn">Agendar pelo WhatsApp</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Machado Estratégia & Negócios | Todos os direitos reservados.
