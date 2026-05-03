@@ -6,74 +6,91 @@
     <title>Machado Estratégia & Negócios</title>
     <!-- Fontes e Ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     
     <style>
         :root {
             --primary: #2c3e50; /* Azul Petróleo Escuro */
             --secondary: #a8907e; /* Bege Acinzentado / Nude */
-            --bg: #f5f5f5;
+            --bg: #f9f9f9;
             --text: #333;
+            --white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); scroll-behavior: smooth; line-height: 1.6; }
 
         /* Navegação */
         nav {
-            position: fixed; width: 100%; padding: 20px 50px;
+            position: fixed; width: 100%; padding: 15px 50px;
             display: flex; justify-content: space-between; align-items: center;
-            background: rgba(255,255,255,0.95); z-index: 1000; border-bottom: 1px solid #eee;
+            background: rgba(255,255,255,0.98); z-index: 1000; border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); }
-        .nav-links a { text-decoration: none; color: var(--text); margin-left: 30px; font-size: 0.9rem; transition: 0.3s; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--primary); font-weight: 700; }
+        .nav-links a { text-decoration: none; color: var(--text); margin-left: 25px; font-size: 0.85rem; font-weight: 600; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
         .nav-links a:hover { color: var(--secondary); }
 
         /* Hero Section */
         .hero {
-            height: 100vh; display: flex; align-items: center; justify-content: center;
-            text-align: center; padding: 0 20px; background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1470') center/cover;
+            height: 90vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 0 20px; 
+            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1470') center/cover;
         }
-        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 10px; color: var(--primary); }
-        .hero-content p { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; color: var(--secondary); }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 15px; color: var(--primary); line-height: 1.1; }
+        .hero-content p { font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase; color: var(--secondary); font-weight: 400; }
 
         /* Seções Gerais */
-        section { padding: 100px 10% 60px; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; text-align: center; }
-
-        /* Grid de Portfólio (Serviços) */
-        .portfolio-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
-        }
-        .portfolio-item {
-            background: #fff; padding: 40px; border-radius: 15px; border: 1px solid #eee;
-            transition: transform 0.3s ease; text-align: center;
-        }
-        .portfolio-item:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .portfolio-item i { font-size: 2rem; color: var(--secondary); margin-bottom: 20px; }
-        .portfolio-item h3 { margin-bottom: 15px; color: var(--primary); }
+        section { padding: 100px 10% 80px; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 50px; text-align: center; color: var(--primary); }
 
         /* Sobre */
-        .about-container { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
-        .about-text { flex: 1; min-width: 300px; }
-        .about-image { flex: 1; min-width: 300px; height: 400px; background: var(--secondary); border-radius: 20px; overflow: hidden; }
-        .about-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(50%); }
+        .about-container { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 350px; }
+        .about-text p { text-align: justify; margin-bottom: 20px; color: #555; }
+        .about-image { flex: 0.8; min-width: 300px; height: 500px; border-radius: 10px; overflow: hidden; box-shadow: 20px 20px 0px var(--secondary); }
+        .about-image img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Especialidades */
+        .bg-white { background-color: var(--white); }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .portfolio-item {
+            background: var(--bg); padding: 45px; border-radius: 5px; border: 1px solid #eee;
+            transition: all 0.4s ease; text-align: center;
+        }
+        .portfolio-item:hover { transform: translateY(-10px); background: var(--white); box-shadow: 0 15px 40px rgba(0,0,0,0.05); border-color: var(--secondary); }
+        .portfolio-item h3 { margin-bottom: 20px; color: var(--primary); font-family: 'Playfair Display', serif; font-size: 1.6rem; }
+        .portfolio-item p { font-size: 0.95rem; color: #666; }
+
+        /* DEPOIMENTOS */
+        .testimonials { background-color: var(--primary); color: var(--white); }
+        .testimonials h2 { color: var(--white); }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial-card { 
+            background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; 
+            position: relative; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1);
+        }
+        .testimonial-card:hover { background: rgba(255,255,255,0.1); }
+        .quote-icon { font-family: 'Playfair Display', serif; font-size: 4rem; color: var(--secondary); position: absolute; top: 10px; left: 20px; opacity: 0.4; }
+        .testimonial-text { font-style: italic; font-size: 1rem; margin-bottom: 25px; position: relative; z-index: 1; }
+        .testimonial-author { display: block; font-weight: 600; color: var(--secondary); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 
         /* Contato */
-        .contact { text-align: center; background: var(--primary); color: white; padding: 80px 20px; }
-        .contact h2 { color: white; }
+        .contact { text-align: center; padding: 120px 20px; background: var(--white); }
         .btn {
-            display: inline-block; padding: 15px 40px; background: var(--secondary);
-            color: white; text-decoration: none; border-radius: 50px; transition: 0.3s; margin-top: 20px;
+            display: inline-block; padding: 18px 45px; background: var(--primary);
+            color: white; text-decoration: none; border-radius: 50px; transition: 0.3s; margin-top: 30px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;
         }
-        .btn:hover { background: #917b6a; transform: scale(1.05); }
+        .btn:hover { background: var(--secondary); transform: scale(1.05); box-shadow: 0 10px 20px rgba(168, 144, 126, 0.3); }
 
-        footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #888; }
+        footer { text-align: center; padding: 50px; background: #1a252f; color: #888; font-size: 0.8rem; }
+        .footer-logo { color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 10px; display: block; }
 
         @media (max-width: 768px) {
-            nav { padding: 20px; }
+            nav { padding: 15px 20px; }
             .nav-links { display: none; }
-            .hero-content h1 { font-size: 2.5rem; }
+            .about-image { order: -1; height: 350px; box-shadow: 10px 10px 0px var(--secondary); }
+            section { padding: 60px 5%; }
         }
     </style>
 </head>
@@ -85,63 +102,84 @@
             <a href="#inicio">Início</a>
             <a href="#sobre">Sobre</a>
             <a href="#especialidades">Especialidades</a>
+            <a href="#depoimentos">Depoimentos</a>
             <a href="#contato">Contato</a>
         </div>
     </nav>
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <p>Consultoria & Treinamentos</p>
-            <h1>Clareza • Estratégia • Execução • Posicionamento</h1>
-            <a href="#contato" class="btn" style="background: var(--primary);">Conheça meu trabalho</a>
+            <p>Consultoria • Treinamentos • Mentorias</p>
+            <h1>Clareza • Estratégia <br> Execução • Posicionamento</h1>
+            <a href="#contato" class="btn">Solicitar Consultoria</a>
         </div>
     </section>
 
     <section id="sobre">
         <div class="about-container">
             <div class="about-image">
-                <!-- Substitua pelo link de uma foto dela -->
                 <img src="https://i.imgur.com/5k6rJfc.jpeg" alt="Elienaide Machado">
             </div>
             <div class="about-text">
-                <h2>Sobre Mim</h2>
-                <p style="text-align:justify">A Machado Estratégia e Negócios nasce com o propósito de transformar desafios empresariais em oportunidades reais de crescimento. Liderada por Elienaide Machado, a empresa atua de forma estratégica no desenvolvimento de soluções que integram tecnologia, gestão e inteligência de mercado.
-
-Com uma trajetória sólida nas áreas de tecnologia, educação e desenvolvimento comercial, Elienaide traz uma visão prática e orientada a resultados, apoiando empresas e profissionais na estruturação de processos, expansão de negócios e tomada de decisões mais assertivas.
-
-A atuação da Machado Estratégia e Negócios é pautada em três pilares principais:
-estratégia, para direcionar caminhos sustentáveis de crescimento;
-inovação, para adaptar negócios às novas demandas do mercado;
-e eficiência, para otimizar recursos e maximizar resultados.</p>
-                <br>
-                <p style="text-align:justify">Mais do que oferecer serviços, a Machado Estratégia e Negócios se posiciona como uma parceira de crescimento, comprometida com resultados concretos e com a evolução contínua de seus clientes.</p>
+                <h2>Sobre a Machado</h2>
+                <p>A Machado Estratégia & Negócios nasce com o propósito de transformar desafios empresariais em oportunidades reais de crescimento. Liderada por Elienaide Machado, a empresa atua de forma estratégica no desenvolvimento de soluções que integram tecnologia, gestão e inteligência de mercado.</p>
+                <p>Com uma trajetória sólida nas áreas de tecnologia, educação e desenvolvimento comercial, Elienaide traz uma visão prática e orientada a resultados, apoiando empresas e profissionais na estruturação de processos, expansão de negócios e tomada de decisões mais assertivas.</p>
+                <p>A atuação é pautada em três pilares principais: <strong>estratégia</strong>, para direcionar caminhos sustentáveis; <strong>inovação</strong>, para adaptar negócios; e <strong>eficiência</strong>, para maximizar resultados.</p>
             </div>
         </div>
     </section>
 
-    <section id="especialidades" style="background-color: #f9f9f9;">
+    <section id="especialidades" class="bg-white">
         <h2>Áreas de Atuação</h2>
         <div class="portfolio-grid">
             <div class="portfolio-item">
                 <h3>Consultorias</h3>
-                <p>Diagnóstico e planejamento estratégico para identificar oportunidades de crescimento para empresas de Varejo, otimizar processos e estruturar soluções eficientes. Atuamos lado a lado com o negócio para direcionar decisões mais assertivas e sustentáveis.</p>
+                <p>Diagnóstico e planejamento estratégico para identificar oportunidades de crescimento, otimizar processos e estruturar soluções eficientes, especialmente no setor de Varejo.</p>
             </div>
             <div class="portfolio-item">
                 <h3>Mentorias</h3>
-                <p>Acompanhamento personalizado para desenvolvimento profissional e empresarial, com foco em resultados práticos. Compartilhamos conhecimento, direcionamento estratégico e suporte para acelerar a evolução e tomada de decisão.</p>
+                <p>Acompanhamento personalizado para desenvolvimento profissional e empresarial, com foco em resultados práticos e aceleração da tomada de decisão.</p>
             </div>
             <div class="portfolio-item">
                 <h3>Integração Tecnológica</h3>
-                <p>Implementação de tecnologias e soluções digitais que modernizam processos, aumentam a produtividade e fortalecem a competitividade do negócio. Conectamos estratégia e tecnologia para gerar resultados reais.</p>
+                <p>Implementação de soluções digitais que modernizam processos, aumentam a produtividade e fortalecem a competitividade do negócio no mercado atual.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO DE DEPOIMENTOS -->
+    <section id="depoimentos" class="testimonials">
+        <h2>O que dizem nossos clientes</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">"Elienaide notou habilidades que eu nem sabia que tinha, e me orientou sobre como alavancar minha carreira. Graças a isso, sou um profissional reconhecido e habilidoso que ganha 5x mais do que quando comecei."</p>
+                <span class="testimonial-author">Vitor M. — Engenheiro de Software</span>
+            </div>
+            <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">"A mentoria foi um divisor de águas na minha carreira. O foco na execução e no posicionamento de mercado é o diferencial da Machado."</p>
+                <span class="testimonial-author">Juliana M. — Gestora Comercial</span>
+            </div>
+            <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="testimonial-text">"Excelente suporte na integração tecnológica. Hoje temos processos automatizados e uma equipe muito mais produtiva."</p>
+                <span class="testimonial-author">Marcos S. — Diretor de Operações</span>
             </div>
         </div>
     </section>
 
     <section id="contato" class="contact">
-        <h2>Vamos conversar?</h2>
+        <h2>Vamos elevar o nível do seu negócio?</h2>
         <p>Atendimentos presenciais na Bahia e Online para todo o Brasil.</p>
         <a href="https://wa.me/5575988362038" class="btn">Agendar pelo WhatsApp</a>
     </section>
 
     <footer>
-        <p>&copy; 2024 Machado Estratégia & Negócios | Todos os direitos reservados.
+        <span class="footer-logo">Machado Estratégia & Negócios</span>
+        <p>&copy; 2024 Machado Estratégia & Negócios | Todos os direitos reservados.</p>
+        <p style="margin-top: 10px;">Feito com foco em resultados.</p>
+    </footer>
+
+</body>
+</html>
